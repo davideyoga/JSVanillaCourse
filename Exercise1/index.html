@@ -4,17 +4,50 @@
 <head>
 	<title>Ex1</title>
 	<meta charset="UTF-8" />
+
+	<script>
+
+		window.onload = function () {
+			console.info("DOMContentLoaded");
+
+			//retrieve button from dom
+			ex1Button = document.getElementById("ex1button");
+
+			console.info(ex1Button);
+
+			ex1Button.addEventListener("click", function (event) {
+
+				console.log('Event is Listened')
+				console.log(event);
+				console.log("exInput: " + document.getElementById("ex1input").value);
+
+				/*
+				try {
+					number2 = parseInt(document.getElementById("number2").value);
+					if (isNaN(number2)) {
+						number2 = 0;
+						throw "error";
+					}
+				} catch (e) {
+					alert("non inserire il testo!!!!!");
+				}
+				document.getElementById("sum").value = number1 + number2;
+				*/
+			});
+
+		}
+
+	</script>
+
 </head>
 
 <body>
-	<div id="app"></div>
 
-	TestEx1
+	<label>First Input</label><br>
+	<input type="text" id="ex1input"><br>
 
-	<!--
-	<script src="src/index.js">
-	</script>
-	-->
+	<button id="ex1button">ex1</button>
+
 </body>
 
 </html>
